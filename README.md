@@ -15,6 +15,8 @@ Les guides suivants ont été rédigés pour un environnement Linux. Ils peuvent
 
 ### Installer une instance avec les données de la Base Adresse Nationale en ODbL
 
+Tout d'abord placez vous dans un dossier de travail, appelez-le par exemple `ban`. Vous aurez besoin d'environ 8 Go d'espace disque pour toute l'opération.
+
 #### Télécharger les données pré-indexées
 
 ```bash
@@ -44,4 +46,17 @@ docker-compose up
 
 # ou en arrière-plan
 docker-compose up -d
+```
+
+Suivant les performances de votre machine, l'instance mettra entre 30 secondes et 2 minutes à démarrer effectivement, le temps de charger les données dans la mémoire vive.
+
+* 90 secondes sur une VPS-SSD-3 OVH (2 vCPU, 8 Go)
+* 50 secondes sur une VM EG-15 OVH (4 vCPU, 15 Go)
+
+Par défaut l'instance écoute sur le port `7878`.
+
+#### Tester l'instance
+
+```bash
+curl "http://localhost:7878/search?q=1+rue+de+la+paix+paris"
 ```
