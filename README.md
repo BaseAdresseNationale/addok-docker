@@ -4,7 +4,7 @@ Ces images permettent de simplifier grandement la mise en place d'une instance [
 
 ## Guides d'installation
 
-Les guides suivants ont été rédigés pour un environnement Linux. Ils peuvent être adaptés pour Windows.
+Les guides suivants ont été rédigés pour un environnement Linux ou Mac. Ils peuvent être adaptés pour Windows.
 
 ### Pré-requis
 
