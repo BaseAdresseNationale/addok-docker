@@ -8,10 +8,10 @@ Les guides suivants ont été rédigés pour un environnement Linux ou Mac. Ils 
 
 ### Pré-requis
 
-* Au moins 6 Go de RAM (à froid)
+* Au moins 6 Go de RAM disponible (à froid)
 * 8 Go d'espace disque disponible (hors logs)
 * [Docker CE 1.13.0+](https://docs.docker.com/engine/installation/)
-* [Docker Compose](https://docs.docker.com/compose/install/) (recommandé)
+* [Docker Compose](https://docs.docker.com/compose/install/)
 * `unzip` ou équivalent
 * `wget` ou équivalent
 
