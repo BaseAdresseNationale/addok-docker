@@ -8,6 +8,8 @@ Les guides suivants ont été rédigés pour un environnement Linux ou Mac. Ils 
 
 ### Pré-requis
 
+* Au moins 6 Go de RAM (à froid)
+* 8 Go d'espace disque disponible (hors logs)
 * [Docker CE 1.13.0+](https://docs.docker.com/engine/installation/)
 * [Docker Compose](https://docs.docker.com/compose/install/) (recommandé)
 * `unzip` ou équivalent
@@ -15,7 +17,7 @@ Les guides suivants ont été rédigés pour un environnement Linux ou Mac. Ils 
 
 ### Installer une instance avec les données de la Base Adresse Nationale en ODbL
 
-Tout d'abord placez vous dans un dossier de travail, appelez-le par exemple `ban`. Vous aurez besoin d'environ 8 Go d'espace disque pour toute l'opération.
+Tout d'abord placez vous dans un dossier de travail, appelez-le par exemple `ban`.
 
 #### Télécharger les données pré-indexées
 
