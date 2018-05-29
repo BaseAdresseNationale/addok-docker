@@ -10,6 +10,8 @@ services:
     - ./addok-data/addok.db:/data/addok.db
     links:
     - addok-redis:redis
+    environment:
+      WORKERS: 1
   addok-redis:
     image: etalab/addok-redis
     volumes:

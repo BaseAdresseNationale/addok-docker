@@ -62,3 +62,9 @@ Par défaut l'instance écoute sur le port `7878`.
 ```bash
 curl "http://localhost:7878/search?q=1+rue+de+la+paix+paris"
 ```
+
+### Paramètres avancés
+
+| Nom du paramètre | Description |
+| ----- | ----- |
+| `WORKERS` | Nombre de workers addok à lancer. Valeur par défaut : `1`. |
