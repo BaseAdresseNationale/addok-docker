@@ -8,10 +8,14 @@ services:
     volumes:
     - ./addok-data/addok.conf:/etc/addok/addok.conf
     - ./addok-data/addok.db:/data/addok.db
+    - ./logs:/logs
     links:
     - addok-redis:redis
     environment:
       WORKERS: 1
+      LOG_QUERIES: 1
+      LOG_NOT_FOUND: 1
+      SLOW_QUERIES: 200
   addok-redis:
     image: etalab/addok-redis
     volumes:
