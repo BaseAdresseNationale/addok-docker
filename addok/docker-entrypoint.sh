@@ -29,4 +29,4 @@ cat /etc/addok/addok.patched.conf
 
 WORKERS=${WORKERS:-1}
 
-gunicorn -w $WORKERS -b 0.0.0.0:7878 addok.http.wsgi
+gunicorn -w $WORKERS -b 0.0.0.0:7878 --access-logfile - addok.http.wsgi
