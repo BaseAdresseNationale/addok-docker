@@ -28,5 +28,5 @@ fi
 cat /etc/addok/addok.patched.conf
 
 WORKERS=${WORKERS:-1}
-
-gunicorn -w $WORKERS -b 0.0.0.0:7878 --access-logfile - addok.http.wsgi
+WORKER_TIMEOUT=${WORKER_TIMEOUT:-30}
+gunicorn -w $WORKERS --timeout $WORKER_TIMEOUT -b 0.0.0.0:7878 --access-logfile - addok.http.wsgi

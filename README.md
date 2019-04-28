@@ -68,3 +68,4 @@ curl "http://localhost:7878/search?q=1+rue+de+la+paix+paris"
 | Nom du paramètre | Description |
 | ----- | ----- |
 | `WORKERS` | Nombre de workers addok à lancer. Valeur par défaut : `1`. |
+| `WORKER_TIMEOUT` | [Durée maximale allouée à un worker](http://docs.gunicorn.org/en/0.17.2/configure.html#timeout) pour effectuer une opération de géocodage. Valeur par défaut : `30`. |
