@@ -13,6 +13,7 @@ services:
     - addok-redis:redis
     environment:
       WORKERS: 1
+      WORKER_TIMEOUT: 30
       LOG_QUERIES: 1
       LOG_NOT_FOUND: 1
       SLOW_QUERIES: 200
