@@ -2,7 +2,11 @@ version: '2'
 
 services:
   addok:
-    image: etalab/addok
+    image: addok
+    container_name: addok
+    build:
+      dockerfile: Dockerfile
+      context: ./addok
     ports:
     - "7878:7878"
     volumes:
@@ -19,5 +23,6 @@ services:
       SLOW_QUERIES: 200
   addok-redis:
     image: etalab/addok-redis
+    container_name: addok-redis
     volumes:
     - ./addok-data/dump.rdb:/data/dump.rdb
