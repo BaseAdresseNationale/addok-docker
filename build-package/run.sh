@@ -1,5 +1,8 @@
 #!/bin/bash
 
+echo "> Création du répertoire de travail"
+mkdir -p dist
+
 echo "> Réinitialisation de l'environnement docker"
 docker-compose -f build-package/docker-compose-build.yml stop
 docker-compose -f build-package/docker-compose-build.yml rm -f
