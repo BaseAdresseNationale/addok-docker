@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  addok-importer:
+    build:
+      context: ../addok-importer
+    stdin_open: true
+    volumes:
+    - ../dist:/data
+    links:
+    - addok-importer-redis:redis
+  addok-importer-redis:
+    image: redis:4
+    volumes:
+    - ../dist:/data
+  addok-importer-redis-save:
+    image: redis:4
+    command: redis-cli -h redis -p 6379 shutdown save
+    links:
+    - addok-importer-redis:redis
