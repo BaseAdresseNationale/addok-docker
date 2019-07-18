@@ -22,14 +22,14 @@ Tout d'abord placez vous dans un dossier de travail, appelez-le par exemple `ban
 #### Télécharger les données pré-indexées
 
 ```bash
-wget https://adresse.data.gouv.fr/data/geocode/ban_odbl_addok-latest.zip
+wget https://adresse.data.gouv.fr/data/ban/adresses-odbl/latest/addok/addok-france-bundle.zip
 ```
 
 #### Décompresser l'archive
 
 ```bash
 mkdir addok-data
-unzip -d addok-data ban_odbl_addok-latest.zip
+unzip -d addok-data addok-france-bundle.zip
 ```
 
 #### Télécharger le fichier Compose
