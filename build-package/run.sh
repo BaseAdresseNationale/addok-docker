@@ -26,10 +26,10 @@ echo "> Démontage de l'environnement docker"
 docker-compose -f build-package/docker-compose-build.yml stop
 docker-compose -f build-package/docker-compose-build.yml rm -f
 
-echo "> Copie de la configuration utilisée"
-cp addok-importer/addok.conf dist/
+echo "> Préparation de l'archive"
+zip -j dist/prebuilt-bundle.zip dist/addok.db dist/dump.rdb addok-importer/addok.conf
 
-echo "> Listing des fichiers produits"
-ls -lh dist
+echo "> Nettoyage"
+sudo rm -f dist/addok.db && sudo rm -f dist/dump.rdb
 
 echo "Terminé"
