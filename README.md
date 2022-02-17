@@ -15,14 +15,14 @@ Les guides suivants ont été rédigés pour un environnement Linux ou Mac. Ils 
 * `unzip` ou équivalent
 * `wget` ou équivalent
 
-### Installer une instance avec les données de la Base Adresse Nationale en ODbL
+### Installer une instance avec les données de la Base Adresse Nationale
 
 Tout d'abord placez vous dans un dossier de travail, appelez-le par exemple `ban`.
 
 #### Télécharger les données pré-indexées
 
 ```bash
-wget https://adresse.data.gouv.fr/data/ban/adresses-odbl/latest/addok/addok-france-bundle.zip
+wget https://adresse.data.gouv.fr/data/ban/adresses/latest/addok/addok-france-bundle.zip
 ```
 
 #### Décompresser l'archive
