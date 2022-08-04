@@ -5,6 +5,8 @@
 - Pour POI
 ```
 wget https://www.data.gouv.fr/fr/datasets/r/46eff5e9-a409-4217-abcf-62c25630cd14
+mv 46eff5e9-a409-4217-abcf-62c25630cd14 poi.json.gz
+# run run.sh with this gz.
 ```
 
 NB : la même méthode peut être utilisée pour d'autres sources de géocodage
@@ -16,9 +18,9 @@ NB : les fichiers sont au format json et pas ndjson comme la BAN, il faudra fair
 3. Mettre vos données BAN, POI dans des répertoires spécifiques
 
 ```
-mkdir addok-data-ban
+mkdir addok-data # for ban
 mkdir addok-data-poi
-mv PATH/TO/BUNDLE-BAN/DATA addok-data-ban
+mv PATH/TO/BUNDLE-BAN/DATA addok-data #for ban
 mv PATH/TO/BUNDLE-POI/DATA addok-data-poi
 ```
 
