@@ -1,0 +1,43 @@
+version: '2'
+
+services:
+  addok-ban:
+    build: ./addok
+    ports:
+    - "7878-7883:7878"
+    volumes:
+    - ./addok-data/addok.conf:/etc/addok/addok.conf
+    - ./addok-data/addok.db:/data/addok.db
+    - ./logs:/logs
+    links:
+    - addok-redis-ban:redis
+    environment:
+      WORKERS: 32
+      WORKER_TIMEOUT: 30
+      LOG_QUERIES: 1
+      LOG_NOT_FOUND: 1
+      SLOW_QUERIES: 200
+  addok-redis-ban:
+    image: etalab/addok-redis
+    volumes:
+    - ./addok-data/dump.rdb:/data/dump.rdb
+  addok-poi:
+    build: ./addok
+    ports:
+    - "7830:7878"
+    volumes:
+    - ./addok-data-poi/addok.conf:/etc/addok/addok.conf
+    - ./addok-data-poi/addok.db:/data/addok.db
+    - ./logs-poi:/logs
+    links:
+    - addok-redis-poi:redis
+    environment:
+      WORKERS: 32
+      WORKER_TIMEOUT: 30
+      LOG_QUERIES: 1
+      LOG_NOT_FOUND: 1
+      SLOW_QUERIES: 200
+  addok-redis-poi:
+    image: etalab/addok-redis
+    volumes:
+    - ./addok-data-poi/dump.rdb:/data/dump.rdb
