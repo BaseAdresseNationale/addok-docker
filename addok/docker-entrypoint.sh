@@ -6,7 +6,6 @@ if [ ! -f /etc/addok/addok.conf ]; then
 fi
 
 cp /etc/addok/addok.conf /etc/addok/addok.patched.conf
-echo "SQLITE_DB_PATH = '/data/addok.db'" >> /etc/addok/addok.patched.conf
 
 echo "LOG_DIR = '/logs'" >> /etc/addok/addok.patched.conf
 
@@ -24,8 +23,6 @@ if [ ! -z "$SLOW_QUERIES" ]; then
   echo Will log slow queries
   echo "SLOW_QUERIES = ${SLOW_QUERIES}" >> /etc/addok/addok.patched.conf
 fi
-
-cat /etc/addok/addok.patched.conf
 
 WORKERS=${WORKERS:-1}
 WORKER_TIMEOUT=${WORKER_TIMEOUT:-30}
