@@ -35,7 +35,7 @@ unzip -d addok-data addok-france-bundle.zip
 #### Télécharger le fichier Compose
 
 ```bash
-wget https://raw.githubusercontent.com/etalab/addok-docker/master/docker-compose.yml
+wget https://raw.githubusercontent.com/BaseAdresseNationale/addok-docker/master/docker-compose.yml
 ```
 
 #### Démarrer l'instance
