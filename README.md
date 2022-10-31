@@ -1,6 +1,23 @@
 # Conteneurs Addok pour Docker
 
-Ces images permettent de simplifier grandement la mise en place d'une instance [addok](https://github.com/addok/addok) avec les données de références diffusées par [Etalab](https://www.etalab.gouv.fr).
+Ces images permettent de simplifier grandement la mise en place d'une instance [addok](https://github.com/addok/addok) avec les données de références diffusées par la [Base Adresse Nationale](https://adresse.data.gouv.fr).
+
+## Plateformes
+
+Les images Docker sont disponibles pour `linux/amd64` et `linux/arm64`. Elles sont donc parfaitement utilisables sur Apple Silicon ou Raspberry Pi sans couche d’émulation.
+
+## Composants installés
+
+| Nom du composant | Version |
+| --- | --- |
+| `redis` | `7.x` |
+| `python` | `3.10.x` |
+| `addok` | `1.0.3` |
+| `addok-fr` | `1.0.1` |
+| `addok-france` | `1.1.3` |
+| `addok-csv` | `1.0.1` |
+| `addok-sqlite-store` | `1.0.1` |
+| `gunicorn` | `20.1.0` |
 
 ## Guides d'installation
 
